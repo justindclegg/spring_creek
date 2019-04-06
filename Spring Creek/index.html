@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@0.9.90/dist/conversational-form.min.js" crossorigin></script>  <meta charset="utf-8">
+<script type="text/javascript" src="https://cf-4053.kxcdn.com/conversational-form/0.9.6/conversational-form.min.js?v=1.0.0" crossorigin=""></script>
+
+
+
+  <title>Spring Creek</title>
+  <!-- <link rel="stylesheet" href="test.css"> -->
+
+  <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+ <!--  <div id="top-header">
+    <h1><strong>Spring</strong></h1>
+    <h2>Creek</h2>
+</div> -->
+
+  <form id="conversationalForm">
+    <fieldset>
+      <input cf-questions="Oh hi! Welcome to the Spring Creek Service page. Tap the button below to submit a service project." cf-label="Yes, let's get started!" type="radio" value="0">
+    </fieldset>
+
+    <fieldset cf-questions="Is this service project for you or someone else?">
+      <label for="help-me">I need some help!
+                                            <input type="radio" name="cfc-intro" id="help-me" value="help-me">
+                                        </label>
+
+      <label for="help-other">It's for someone else.
+                                            <input type="radio" name="cfc-intro" id="help-other" value="help-other">
+                                        </label>
+
+      <label for="help-other">I'd rather not say.
+          <input type="radio" name="cfc-intro" id="help-unkown" value="help-unkown">
+      </label>
+
+    </fieldset>
+
+    <input type="text" name="name" id="your-name" cf-questions="Great! Type your first and last name below. " cf-conditional-cfc-intro="help-me" />
+
+    <input type="text" name="name" id="other-name" cf-questions="Great! Type the first and last name of the person you want to help below." cf-conditional-cfc-intro="help-other" />
+
+    <input type="text" id="unkown-name" cf-questions="That's okay!" cf-conditional-cfc-intro="help-unkown" cf-label="Let's keep going">
+
+
+    <fieldset>
+      <label for="Location">Location</label>
+      <input name="location" cf-questions="Where will this service project take place? (Example: 1874 South 900 East or Spring Creek Park)" type="text" class="form-control" name="location" id="location">
+    </fieldset>
+
+    <fieldset>
+      <label for="Service">Service</label>
+      <input name="project" cf-questions="What type of service is needed? (Example: Help with moving, raking leaves or fixing sprinklers)" type="text" class="form-control" name="service" id="service">
+    </fieldset>
+
+    <fieldset>
+      <label for="Date">Date</label>
+      <input name="date" cf-questions="What day are you hoping to have this service project taken care of? (MM/DD/YYYY)" type="text" class="form-control" name="date" id="date" cf-input-placeholder="Click to pick a date" cf-placeholder="Click here to pick a date">
+    </fieldset>
+
+    <fieldset>
+      <label for="email">Email</label>
+      <input name="email" pattern=".+\@.+\..+" cf-error="E-mail not correct" cf-questions="So far so good! To confirm everything, type your email address below." type="email" class="form-control" name="email" id="your-email">
+    </fieldset>
+
+    <fieldset style="display: none;">
+      <label for="thats-all">Hit the button below when you’re ready to submit</label>
+      <select cf-questions="Nice work! Tap the GO button below to submit your request" name="submit-form" id="submit-form" class="form-control">
+                <option>GO</option>
+            </select>
+    </fieldset>
+
+
+          <button type="submit" id="submit-form" class="btn btn-default">Submit</button>
+
+  <cf-robot-message cf-questions="Thanks, your response has been submitted."></cf-robot-message>
+
+          </fieldset>
+
+
+  </form>
+  <!-- <div class="cf"></div> -->
+
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="conversational-form.js">
+</script>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
